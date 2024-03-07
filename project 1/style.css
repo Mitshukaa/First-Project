@@ -1,0 +1,122 @@
+body {
+    font: 16px/28px arial,sans-serif;
+    background-color: #eaeaea;
+    color: #333;
+    background-image: url(bg.png);
+}
+
+.container {
+    margin: auto;
+    width: 960px;
+    background-color: #fff;
+}
+
+.header {
+    padding: 20px;
+    padding-bottom: 10px;
+}
+
+.header .judul {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.header ul li {
+    margin-left: -40px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 40px;
+}
+
+.header ul li a {
+    color: #f95959;
+    text-decoration: none;
+    padding: 2px;
+}
+
+.header a:hover {
+    color: #e3e3e3;
+    background-color: #f95959;
+}
+
+.hero {
+    height: 330px;
+    background-image: url(hero.jpg);
+    background-size: cover;
+    background-position: 0 -200px;
+    border-top: 5px solid #f95959;
+    border-bottom: 5px solid lightblue
+}
+
+.main {
+    width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.main h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.main .penulis {
+    font-size: 11px;
+    margin-top: -5px;
+}
+.main .penulis a {
+   color: #f95959;
+   text-decoration: none;
+}
+
+.main p {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.sidebar {
+    width: 300px;
+    float: right;
+    padding: 20px;
+}
+
+.sidebar h3 {
+    font-weight: bold;
+    color: #666;
+}
+
+.sidebar img{
+    width: 70px;
+    height: 70px;
+    float: left;
+    padding-right: 10px;
+}
+
+.sidebar p {
+    font: 12px/18px arial;
+}
+
+.footer {
+    background-color: #333;
+}
+
+.footer .copy {
+    color: #eaeaea;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    zoom: 1;
+}
