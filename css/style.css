@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* @font-face {
+   font-family: myFirstFont;
+   src: url(../BebasNeue-Regular.woff);
+} */
+
+body {
+    background-color: #ddd;
+    font: 18px/36px 'Bebas Neue', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    margin: 50px 0;
+    text-shadow: 1px 1px 2px white;
+}
+
+.container {
+    width: 600px;
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.container .gallery {
+    list-style-type: none;
+    margin-left: -40px;
+
+}
+
+.gallery li {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid #666;
+    float: left;
+    margin-right: 20px;
+    margin: 0px 10px;
+}
+
+.gallery li span {
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(200, 200, 200, .5);
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 120px;
+    color: #333;
+    text-shadow: 1px 1px 1px #ddd;
+    opacity: 0;
+    transform: scale(0) rotate(0);
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transform: scale(0) rotate(0);
+    -moz-transform: scale(0) rotate(0);
+    -ms-transform: scale(0) rotate(0);
+    -o-transform: scale(0) rotate(0);
+}
+
+.gallery li a:hover span {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+    -webkit-transform: scale(1) rotate(360deg);
+    -moz-transform: scale(1) rotate(360deg);
+    -ms-transform: scale(1) rotate(360deg);
+    -o-transform: scale(1) rotate(360deg);
+}
+
+
+.gallery li,
+.gallery li span,
+.gallery li a img {
+    border-radius: 50%;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.clear {
+    clear: both;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .0);
+    z-index: 999;
+    transition:  .8s;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .7);
+
+}
+
+.overlay img {
+    max-height: 100%;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, .5);
+    border: 2px solid white;
+
+}
+
+.overlay:target img {
+    animation: fadeajah 1s;
+    -webkit-animation: fadeajah 1s;
+}
+
+.overlay .close {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -20px;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border: 1px solid white;
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 14px;
+    opacity: 0;
+}
+
+.overlay:target .close {
+    animation: slidedown .6s .2s forwards;
+    -webkit-animation: slidedown .6s .2s forwards;
+}
+
+.overlay:target .next, 
+.overlay:target .prev {
+    animation: fadeajah .5 .5S forwards;
+    -webkit-animation: fadeajah .5 .5S forwards;
+}
+
+.next, .prev   {
+    position: absolute;
+    width: 57px;
+    height: 93px;
+    background-image: url(../iloveimg-resized/next.png);
+    text-indent: -9999px;
+    top: 50%;
+    margin-left: 50px;
+    opacity: 0;
+}
+
+.prev {
+    background-image: url(../iloveimg-resized/prev.png);
+    margin-left: -100px;
+}
+
+
+@keyframes fadeajah {
+    
+    0% {
+       
+        opacity: 0;
+    }
+
+    100% {
+      
+        opacity: 1;
+    }
+
+
+}
+
+@keyframes zoomDanFade {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slidedown {
+    0% {
+        margin-top: -20px;
+        opacity: 0;
+    }
+
+    100% {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
